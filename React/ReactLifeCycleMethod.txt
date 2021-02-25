@@ -1,0 +1,84 @@
+/*
+componentWillMount- immediately before initial rendering
+componentDidMount- immediately after initial rendering
+componenWillReceiveProps- When component receive new props
+shouldComponentUpdate-Before/after rendering new props/state
+componentWillUpdate- Before/after rendering new props/state
+componentDidUpdate- After component's updates are flushed to DOM
+componentWillUnMount- This method is called when a component is being removed from the DOM
+
+*/
+
+/*
+New Life Cycle Methods
+static getDerivedStateFromProps()- runs after the component output has been rendered to the DOM.
+it is an update for componentDidUpdate()
+
+it is an update for componentWillMount
+
+
+*/
+
+/*Order of initial call- Mounting
+constructor()
+static getDerivedStateFromProps()
+render()
+componentDidMount()
+
+order when a component is being re-rendered - Updating
+static getDerivedStateFromProps()
+shouldComponentUpdate()
+render()
+getSnapshotBeforeUpdate()
+componentDidUpdate()
+
+unmounting
+componentWillUnmount()
+
+Error Handling
+static getDerivedStateFromError()
+componentDidCatch()
+
+
+
+*/
+
+
+/* Features
+Constructor()-
+-Initializing local state by assigning an object to this.state.
+-Binding event handler methods to an instance.
+
+componentDidMount()
+-invoked immediately after a component is mounted
+-call setState() immediately in componentDidMount()
+
+componentDidUpdate(prevProps, prevState, snapshot)
+-invoked immediately after updating occurs
+-call setState() immediately in componentDidUpdate() but note that it must be wrapped in a condition
+-If your component implements the getSnapshotBeforeUpdate() lifecycle (which is rare), the value it returns will be passed as a third “snapshot” parameter to componentDidUpdate(). Otherwise this parameter will be undefined.
+
+componentWillUnmount()
+invoked immediately before a component is unmounted and destroyed. 
+
+Other Methods:
+
+shouldComponentUpdate(nextProps, nextState)
+shouldComponentUpdate() is invoked before rendering when new props or state are being received. Defaults to true. This method is not called for the initial render or when forceUpdate() is used.
+
+static getDerivedStateFromProps(props, state)
+getDerivedStateFromProps is invoked right before calling the render method, both on the initial mount and on subsequent updates. It should return an object to update the state, or null to update nothing.
+
+getSnapshotBeforeUpdate(prevProps, prevState)
+getSnapshotBeforeUpdate() is invoked right before the most recently rendered output is committed to e.g. the DOM. It enables your component to capture some information from the DOM (e.g. scroll position) before it is potentially changed. Any value returned by this lifecycle will be passed as a parameter to componentDidUpdate().
+
+Ex- his use case is not common, but it may occur in UIs like a chat thread that need to handle scroll position in a special way.
+
+static getDerivedStateFromError(error)
+componentDidCatch(error, info)
+A class component becomes an error boundary if it defines either (or both) of the lifecycle methods static getDerivedStateFromError() or componentDidCatch()
+
+
+
+
+
