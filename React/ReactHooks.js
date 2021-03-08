@@ -1,0 +1,32 @@
+import React, { useState, useEffect } from 'react';
+
+function Example() {
+  // Declare a new state variable, which we'll call "count"
+  //useState
+  const [count, setCount] = useState(0);
+
+
+  //useEffect
+  // Similar to componentDidMount and componentDidUpdate:
+  useEffect(() => {
+      // Update the document title using the browser API
+      // this component sets the document title after React updates the DOM
+      document.title = `You clicked ${count} times.`
+    });
+
+  
+
+  function handleStatusChange(status){
+    setIsOnline(status.isOnline);
+  };
+
+  return(
+    <div>
+      <p>You Clicked {count} times.</p>
+      <button
+        onClick = {() => setCount(count+1) }
+      >Click me</button>
+      
+    </div>
+  );
+}
