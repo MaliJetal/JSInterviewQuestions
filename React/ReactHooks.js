@@ -22,6 +22,15 @@ function Example() {
       };
     });
   
+   //useContent
+  function Example() {
+  const locale = useContext(LocaleContext);
+  const theme = useContext(ThemeContext);
+  
+  //useReducer
+  function Todos() {
+    const [todos, dispatch] = useReducer(todosReducer);
+  }
   function handleStatusChange(status){
     setIsOnline(status.isOnline);
   };
