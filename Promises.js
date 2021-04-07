@@ -7,4 +7,7 @@ A Promise is in one of these states:
 pending: initial state, neither fulfilled nor rejected. returns  ndefined
 fulfilled: meaning that the operation was completed successfully. returns value
 rejected: meaning that the operation failed. returns error
+Promise.all
+Callback hell is eliminated using promises
+Promise.race
 */
