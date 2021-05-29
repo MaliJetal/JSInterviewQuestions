@@ -24,3 +24,15 @@ myPromise.then((message) => {
 }).catch((message) => {
   console.log("Promise " + message);
 });
+
+const myPromise2 = new Promise((resolve,reject) => {
+  resolve("Promise two fulfilled");
+});
+
+Promise.all([myPromise, myPromise2]).then((message) => {
+  console.log("Message " + message);
+})
+
+Promise.race([myPromise, myPromise2]).then((message) => {
+  console.log("Race " + message);
+})
