@@ -11,3 +11,16 @@ Promise.all
 Callback hell is eliminated using promises
 Promise.race
 */
+
+const myPromise = new Promise((resolve, reject) => {
+  setTimeout((message) => {
+    resolve("Fulfilled");
+  }, 1000);
+  //reject("Rejected");
+});
+
+myPromise.then((message) => {
+  console.log("Promise " + message);
+}).catch((message) => {
+  console.log("Promise " + message);
+});
