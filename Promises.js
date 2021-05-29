@@ -1,4 +1,6 @@
-/*Promises
+/* Promises
+A promise is an object that may produce a single value some time in the future: either a resolved value, or a reason that it’s not resolved (e.g., a network error occurred). 
+
 Promises lets asynchronous methods to return values at some point of time.
 Promises are used to handles asynchronous functions using handlers with their actions - eventual success or failure.
 
