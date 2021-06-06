@@ -1,4 +1,4 @@
-###React LifeCycle Methods
+### React LifeCycle Methods
 
 It is series of Lifecycle events. Every Component goes through it
 
@@ -10,29 +10,29 @@ It is series of Lifecycle events. Every Component goes through it
      alt="LifeCycle Method Diagram"
      style="float: left; margin-right: 10px;" />)
 
-##Mostly used Methods:
+## Mostly used Methods:
 
 1. constructor()
 
 - Initializing local state by assigning an object to <b>this.state</b>.
-- <ul>Use Case</ul> - Binding event handler methods to an instance.
+- <u>Use Case</u> - Binding event handler methods to an instance.
 
 2. render()
 
 - render() is the only required method within a class component in React.
 - handles the rendering of your component to the UI.
-- <ul>Use Case</ul> - the render() method returns JSX that is displayed in the UI.
+- <u>Use Case</u> - the render() method returns JSX that is displayed in the UI.
 
 3. componentDidMount()
 
-- <ul>Use Case</ul> - To initialize API calls.
+- <u>Use Case</u> - To initialize API calls.
 - Allows use of <b> setState() </b>.
 - allows setState for tooltips, modals, and similar concepts.
 
-4. componentDidUpdate()
+4. componentDidUpdate(prevProps, prevState, snapshot)
 
 - This lifecycle method is invoked as soon as the updating happens.
-- <ul>Use Case</ul> - updating the DOM in response to prop or state changes.
+- <u>Use Case</u> - updating the DOM in response to prop or state changes.
 - allows setState() but dont forget to add if condition.
 
 Ex:
@@ -46,14 +46,16 @@ this.fetchData(this.props.userName);
 5. componentWillUnmount()
 
 - before the component is unmounted and destroyed.
-- <ul>Use Case</ul> - Any cleanup actions that you would need to do.
+- <u>Use Case</u> - Any cleanup actions that you would need to do.
 
 Ex:
 componentWillUnmount() {
 window.removeEventListener('resize', this.resizeListener)
 }
 
-##Other Methods: 6. shouldComponentUpdate()
+## Other Methods:
+
+6. shouldComponentUpdate()
 
 - This method is used to let React know if a component is not affected by the state and prop changes.
 - It calls to tell tht you dont want to render states and props changes.
