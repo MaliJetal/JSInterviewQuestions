@@ -25,10 +25,13 @@ useEffect
 -  The Effect Hook, useEffect, adds the ability to perform side effects from a function component. It serves the same purpose as componentDidMount, componentDidUpdate, and componentWillUnmount in React classes, but unified into a single API. 
 -  This component sets the document title after React updates the DOM
 
-useReducer- useReducer lets you manage local state of complex components with a reducer
+useReducer- useReducer lets you manage local state of complex components with a reducer. It is a replacement of redux reducer.
 useContext- useContext lets you subscribe to React context without introducing nesting
 
 useRef
 useLayoutEffect
 useCallback
 useMemo
+
+You can refer my project for more information on React Hook [Here is the link.](https://github.com/MaliJetal/hooks-mini-project.git)
+
