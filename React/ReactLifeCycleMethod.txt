@@ -1,4 +1,11 @@
-/*
+React Life CyCle Methods
+Every component in React goes through a lifecycle of events
+It is series of events.
+
+Mounting – Birth of your component
+Update – Growth of your component
+Unmount – Death of your component
+
 componentWillMount- immediately before initial rendering
 componentDidMount- immediately after initial rendering
 componenWillReceiveProps- When component receive new props
@@ -7,17 +14,13 @@ componentWillUpdate- Before/after rendering new props/state
 componentDidUpdate- After component's updates are flushed to DOM
 componentWillUnMount- This method is called when a component is being removed from the DOM
 
-*/
 
-/*
 New Life Cycle Methods
 static getDerivedStateFromProps()- runs after the component output has been rendered to the DOM.
 it is an update for componentDidUpdate()
 
 it is an update for componentWillMount
 
-
-*/
 
 /*Order of initial call- Mounting
 constructor()
