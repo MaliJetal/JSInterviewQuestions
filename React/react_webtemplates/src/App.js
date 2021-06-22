@@ -22,11 +22,15 @@ function App() {
 
   console.log("posts:", post);
 
+  const lastPost = currentPageNo * postPerPage;
+  const firstPost = lastPost - postPerPage;
+  const currentPosts = post.splice(firstPost, lastPost);
+
   return (
     <div className="App">
       <div className="container">
         <h1 className="text-primary mb-3">My Pagintaion Template</h1>
-        <Posts posts={post} loading={loading} />
+        <Posts posts={currentPosts} loading={loading} />
       </div>
     </div>
   );
